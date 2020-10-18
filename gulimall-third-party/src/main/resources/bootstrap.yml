@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: gulimall-third-party
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        namespace: 2c0bf07f-8c2a-4d72-a897-196878843e2e
+        extension-configs:
+          - {data-id: oss.yml,group: DEFAULT_GROUP,refresh: true}
+    alicloud:
+      access-key: LTAI4GKyd5F7updSUFvwbPMp
+      secret-key: 53l5wld8XcEEgXFUCwU4lqlQGCvAbd
+      oss:
+        bucket: gulimall-conan
+        endpoint: https://oss-cn-beijing.aliyuncs.com

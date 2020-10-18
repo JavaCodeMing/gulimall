@@ -1,0 +1,27 @@
+server:
+  port: 8101
+spring:
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://192.168.56.10:3306/gulimall_sms
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  cloud:
+    nacos:
+      discovery:
+       server-addr: 127.0.0.1:8848
+  application:
+    name: gulimall-coupon
+mybatis-plus:
+  # mapper对应xml文件位置
+  mapper-locations: classpath*:/mapper/**/*.xml
+  # 设置全局主键自增
+  global-config:
+    db-config:
+      id-type: auto
+
+# 测试nacos作为配置中心
+coupon:
+  user:
+    name: conan
+    age: 8

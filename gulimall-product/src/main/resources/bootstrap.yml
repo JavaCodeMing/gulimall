@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: gulimall-product
+  cloud:
+    nacos:
+      config:
+        namespace: 4e823688-f23e-4182-98bc-cc6be0835e34
