@@ -24,7 +24,7 @@ public class GulimallExceptionControllerAdvice {
     //@ResponseBody + @ControllerAdvice = @RestControllerAdvice
     @ExceptionHandler(value = MethodArgumentNotValidException.class)
     public R handleVaildException(MethodArgumentNotValidException e){
-        log.error("数据校验出现问题: {},异常类型: {}",e.getMessage(),e.getClass());
+        log.error("数据校验出现问题: ",e);
         BindingResult bindingResult = e.getBindingResult();
         Map<String,String> errorMap = new HashMap<>();
         bindingResult.getFieldErrors().forEach(fieldError -> {
@@ -35,7 +35,7 @@ public class GulimallExceptionControllerAdvice {
 
     @ExceptionHandler(value = Exception.class)
     public R handleException(Exception e){
-        log.error("系统未知异常: {},异常类型: {}",e.getMessage(),e.getClass());
+        log.error("系统未知异常: ",e);
         return R.error(BizCodeEnume.UNKNOW_EXCEPTION.getCode(),BizCodeEnume.UNKNOW_EXCEPTION.getMessage());
     }
 }

@@ -1,8 +1,8 @@
 package com.atguigu.gulimall.product.service;
 
-import com.baomidou.mybatisplus.extension.service.IService;
 import com.atguigu.common.utils.PageUtils;
 import com.atguigu.gulimall.product.entity.CategoryEntity;
+import com.baomidou.mybatisplus.extension.service.IService;
 
 import java.util.List;
 import java.util.Map;
@@ -24,11 +24,12 @@ public interface CategoryService extends IService<CategoryEntity> {
 
     /**
      * 查询catelogId对应的完整路径([父,子,孙])
-     * @param catelogId
-     * @return
+     * @param catelogId 分类id
+     * @return 三级id对应的完整路径
      */
     Long[] findCatelogPath(Long catelogId);
 
     void updateCascade(CategoryEntity category);
+
 }
 

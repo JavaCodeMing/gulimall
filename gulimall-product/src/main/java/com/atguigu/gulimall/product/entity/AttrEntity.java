@@ -2,14 +2,13 @@ package com.atguigu.gulimall.product.entity;
 
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Data;
 
 import java.io.Serializable;
-import java.util.Date;
-import lombok.Data;
 
 /**
  * 商品属性
- * 
+ *
  * @author dengzhiming
  * @email 1206291365@qq.com
  * @date 2020-10-04 10:18:15
@@ -57,4 +56,6 @@ public class AttrEntity implements Serializable {
 	 */
 	private Integer showDesc;
 
+	//@TableField(exist = false)
+	//private Long attrGroupId;
 }
